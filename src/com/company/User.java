@@ -1,7 +1,6 @@
 package com.company;
 
-import java.util.Objects;
-
+//public class User implements Comparable<User> {
 public class User {
     private final String login;
     private final String password;
@@ -16,9 +15,7 @@ public class User {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof User)) return false;
-
-        User user = (User) o;
+        if (!(o instanceof User user)) return false;
 
         if (login != null ? !login.equals(user.login) : user.login != null) return false;
         if (password != null ? !password.equals(user.password) : user.password != null) return false;
@@ -43,9 +40,7 @@ public class User {
                 '}';
     }
 
-    public String getLogin() {
-        return login;
-    }
+    public String getLogin() { return login; }
 
     public String getPassword() {
         return password;
